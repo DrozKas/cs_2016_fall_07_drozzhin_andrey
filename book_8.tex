@@ -1,0 +1,176 @@
+\documentclass[a4paper, 12pt]{book}
+\usepackage{comment} 
+\usepackage{fullpage}
+\usepackage[utf8x]{inputenc}
+\usepackage[T2A]{fontenc}
+\usepackage[english,russian]{babel}
+\pagestyle{empty}
+
+\setcounter{chapter}{2}
+\setcounter{section}{3}
+
+\setcounter{subsection}{2}
+\setcounter{equation}{16}
+
+\usepackage[fleqn]{amsmath}
+
+\usepackage{color}
+\definecolor{light-gray}{rgb}{0.8,0.8,0.8}
+
+\begin{document}
+\noindent
+\large\textit{2.4 Fluid mechanics: Drag} \hfill \textbf{25} \\
+\begin{equation}\frac{\mathcal{V}^2}{gh}=dimensionless \ constant.\end{equation} 
+(The right side is a dimensionless constant because no second group is
+available to use there.) In other words, $\mathcal{V}^2/gh $ or $\mathcal{V}\sim \sqrt{lg}$.
+
+This result reproduces the result of the less sophisticated dimensional
+analysis in Section 1.2. Indeed, with only one dimensionless group, either
+analysis leads to the same conclusion. However, in hard problems—for
+example, finding the drag force—the less sophisticated method does not
+provide its constraint in a useful form; then the method of dimensionless
+groups is essential.\\
+
+\colorbox{light-gray}{
+\begin{minipage}{\textwidth}
+\textbf {Problem 2.15 Fall time}
+
+Synthesize an approximate formula for the free-fall time t from g and h.
+
+\textbf {Problem 2.16 Kepler’s third law}
+
+Synthesize Kepler’s third law connecting the orbital period of a planet to its
+orbital radius. (See also Problem 1.15.)
+
+\end{minipage}
+} 
+
+\textit{What dimensionless groups can be constructed for the drag problem?}\\
+
+One dimensionless group could be $F/\rho\mathcal{V}^2r^2$; a second group could be $rv/v$.
+Any other group can be constructed from these groups (Problem 2.17), so
+the problem is described by two independent dimensionless groups. The
+most general dimensionless statement is then
+\begin{equation}one group = f(second group),\end{equation}
+where f is a still-unknown (but dimensionless) function.\\
+
+\textit{Which dimensionless group belongs on the left side?}\\
+
+The goal is to synthesize a formula for F, and F appears only in the first
+group $F/\rho\mathcal{V}^2r^2$. With that constraint in mind, place the first group on the
+left side rather than wrapping it in the still-mysterious function f. With
+this choice, the most general statement about drag force is
+\begin{equation}\frac{F}{\rho\mathcal{V}^2r^2}=f\left(\frac{r\mathcal{V}}{v}\right).\end{equation}
+The physics of the (steady-state) drag force on the cone is all contained
+in the dimensionless function f.
+\newpage
+\large\textbf{26} \hfill \textit{2 Easy cases} \\
+\colorbox{light-gray}{
+\begin{minipage}{\textwidth}
+\textbf {Problem 2.17 Only two groups}
+
+Show that F, $\mathcal{V}$, r, $\rho$, and v produce only two independent dimensionless groups.
+
+\textbf {Problem 2.18 How many groups in general?}
+
+Is there a general method to predict the number of independent dimensionless
+groups? (The answer was given in 1914 by Buckingham [9].)
+\end{minipage}}
+The procedure might seem pointless, having produced a drag force that
+depends on the unknown function f. But it has greatly improved our
+chances of finding f. The original problem formulation required guessing
+the four-variable function h in $F = h(\mathcal{V}, r, p, v)$, whereas dimensional
+analysis reduced the problem to guessing a function of only one variable
+(the ratio $\mathcal{V}r/v$). The value of this simplification was eloquently described
+by the statistician and physicist Harold Jeffreys (quoted in [34, p. 82]):
+
+\normalsize{A good table of functions of one variable may require a page; that of a function
+of two variables a volume; that of a function of three variables a bookcase;
+and that of a function of four variables a library.}
+
+\large
+\colorbox{light-gray}{
+\begin{minipage}{\textwidth}
+\textbf {Problem 2.19 Dimensionless groups for the truncated pyramid}
+
+Synthesize an approximate formula for the free-fall time t from g and h.
+
+\textbf {Problem 2.16 Kepler’s third law}
+
+The truncated pyramid of Section 2.3 has volume
+\begin{equation}V=\frac{1}{3}=\left(a^2 + ab + b^2\right).\end{equation}
+Make dimensionless groups from V, h, a, and b, and rewrite the volume using
+these groups. (There are many ways to do so.)
+\end{minipage}
+} 
+
+\textbf {2.4.2 Using easy cases}
+Although improved, our chances do not look high: Even the one-variable
+drag problem has no exact solution. But it might have exact solutions in
+its easy cases. Because the easiest cases are often extreme cases, look first
+at the extreme cases.\\
+
+\textit{Extreme cases of what?}\\
+
+The unknown function f depends on only $r\mathcal{V}/v$,
+\begin{equation}\frac{F}{pv^2r^2}=f\left(\frac{rv}{v}\right),\end{equation}
+so try extremes of rv/v. However, to avoid lapsing into mindless symbol
+pushing, first determine the meaning of $r\mathcal{V}/v$. This combination $r\mathcal{V}/v$,
+\large\textit{2.4 Fluid mechanics: Drag} \hfill \textbf{27} \\
+
+often denoted Re, is the famous Reynolds number. (Its physical interpretation
+requires the technique of lumping and is explained in Section 3.4.3.)
+The Reynolds number affects the drag force via the unknown function f:
+\begin{equation}\frac{F}{p\mathcal{V}^2r^2}=f\left(\frac{r\mathcal{V}}{v}\right),\end{equation}
+With luck, f can be deduced at extremes of the Reynolds number; with
+further luck, the falling cones are an example of one extreme.
+
+\textit{Are the falling cones an extreme of the Reynolds number?}
+
+The Reynolds number depends on r,$\mathcal{V}$, and v. For the speed $\mathcal{V}$, everyday
+experience suggests that the cones fall at roughly 1 m $s^1$ (within, say, a
+factor of 2). The size r is roughly 0.1 m (again within a factor of 2). And
+the kinematic viscosity of air is $\mathcal{V}\sim 10^{−5}m^{2}s^{−1}$. The Reynolds number is
+\begin{equation}\frac{\overbrace{0.1m}^r\times \overbrace{1m^{-1}}^\mathcal{V}}{\underbrace{10^{−5}m^{2}s^{−1}}_\mathcal{V}}\sim 10^4,\end{equation}
+It is significantly greater than 1, so the falling cones are an extreme case of high Reynolds number. (For low Reynolds number, try Problem 2.27 and see [38].)
+
+\colorbox{light-gray}{
+\begin{minipage}{\textwidth}
+\small{\textbf {Problem 2.19 Dimensionless groups for the truncated pyramid}
+
+Synthesize an approximate formula for the free-fall time t from g and h.
+
+\textbf {Problem 2.20 Reynolds numbers in everyday flows}
+
+Estimate Re for a submarine cruising underwater, a falling pollen grain, a falling raindrop, and a 747 crossing the Atlantic.}
+
+\end{minipage}
+}
+The high-Reynolds-number limit can be reached many ways. One way is to shrink the viscosity v to 0, because v lives in the denominator of the Reynolds number. Therefore, in the limit of high Reynolds number, viscosity disappears from the problem and the drag force should not de- pend on viscosity. This reasoning contains several subtle untruths, yet its conclusion is mostly correct. (Clarifying the subtleties required two cen- turies of progress in mathematics, culminating in singular perturbations and the theory of boundary layers [12, 46].)
+Viscosity affects the drag force only through the Reynolds number:
+\begin{equation}\frac{F}{p\mathcal{V}^2r^2}=f\left(\frac{r\mathcal{V}}{v}\right).\end{equation}
+\newpage
+\large\textbf{28} \hfill \textit{2 Easy cases} \\
+To make F independent of viscosity, F must be independent of Reynolds number! The problem then contains only one independent dimensionless group, F/pv2r2, so the most general statement about drag is
+\begin{equation}\frac{\mathcal{V}^2}{gh}=dimensionless \ constant.\end{equation} 
+The drag force itself is then $F \sim p\mathcal{V}^2r^2$. Because $r^2$ is proportional to the cone’s cross-sectional area A, the drag force is commonly written
+\begin{equation}F=\sim p\mathcal{V}^2A.\end{equation} 
+Although the derivation was for falling cones, the result applies to any object as long as the Reynolds number is high. The shape affects only the missing dimensionless constant. For a sphere, it is roughly 1/4; for a long cylinder moving perpendicular to its axis, it is roughly 1/2; and for a flat plate moving perpendicular to its face, it is roughly 1.
+\section{Terminal velocities}
+The result $F\sim p\mathcal{V}^2A$ is enough to predict the terminal veloci- ties of the cones. Terminal velocity means zero acceleration, so the drag force must balance the weight. The weight is $W = \sigma_{pape}rA\sigma_{paper}g$, where paper is the areal density of paper (mass per area) and $A\sigma_{paper}$ is the area of the template after cutting out the quarter section. Because $A\sigma_{paper}$ is comparable to the cross-sectional area A, the weight is roughly given by
+\begin{equation}W\sim \sigma_{paper} Ag\end{equation} 
+Therefore
+\begin{equation} \underbrace{p\mathcal{V}^2 A }_{drag}\sim \underbrace{\sigma_{paper} Ag }_{weight}\end{equation}
+The area divides out and the terminal velocity becomes
+\begin{equation}
+V \sim \sqrt {\frac{\sigma_{paper} g}{p}}.
+\end{equation}
+All cones constructed from the same paper and having the same shape, $whatever\ their\ size$, fall at the same speed!
+\end{document}
+
+
+
+
+
+
+
